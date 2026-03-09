@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script src="https://cdn.amplitude.com/script/d3f541cfbc3f123f51ede508b75ec5be.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('d3f541cfbc3f123f51ede508b75ec5be', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":{"thrashedCursor":true,"errorClicks":true,"deadClicks":true,"rageClicks":true}}});</script>
+  
   <head>
+    <script type="text/javascript">
+  (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+  ;r.type="text/javascript";r.async=true
+  ;r.src="https://cdn.amplitude.com/libs/amplitude-8.26.0-min.gz.js"
+  ;r.onload=function(){if(e.amplitude.runQueuedFunctions){
+  e.amplitude.runQueuedFunctions()}else{console.log("[Amplitude] Error: could not load SDK")}}
+  ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+  ;function s(e,t){e.prototype[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+  var o=function(){this._q=[];return this};var a=["init","logEvent","setUserId","setUserProperties","setOptOut","setVersionName","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId"];for(var c=0;c<a.length;c++){s(o,a[c])}n.Identify=o;n.Identify=o;e.amplitude=n
+  })(window,document);
+
+  amplitude.getInstance().init("ad2ef1084c71fc780b13a615a101bdaf");
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -63,5 +76,6 @@
     </div>
   </body>
 </html>
+
 
 
