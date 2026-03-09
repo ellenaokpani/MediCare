@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <script src="https://cdn.amplitude.com/script/84d7af816cc1cc43b0f6258f231980c2.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('84d7af816cc1cc43b0f6258f231980c2', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":{"thrashedCursor":true,"errorClicks":true,"deadClicks":true,"rageClicks":true}}});</script>
-  
+  <script>
+  // Track Sign Up button click
+  document.getElementById('signUpBtn').addEventListener('click', () => {
+    window.amplitude.logEvent('Sign Up Button Clicked', {
+      page: 'Home Page',
+      buttonId: 'signUpBtn'
+    });
+  });
+
+  // Track Request Demo button click
+  document.getElementById('requestdemoBtn').addEventListener('click', () => {
+    window.amplitude.logEvent('Request Demo Button Clicked', {
+      page: 'Home Page',
+      buttonId: 'requestBtn'
+    });
+  });
+</script>
   <head>
   
     <meta charset="UTF-8" />
@@ -26,7 +42,7 @@
           <li class="link"><a href="#">Blog</a></li>
           <li class="link"><a href="#">Contact</a></li>
         </ul>
-        <button id="signup-btn" class="btn">SignUp</button>
+        <button id="requestdemoBtn" class="btn">SignUp</button>
       </nav>
       <header class="header">
         <div class="content">
@@ -67,6 +83,7 @@
     </div>
   </body>
 </html>
+
 
 
 
