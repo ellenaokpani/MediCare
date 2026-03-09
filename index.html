@@ -2,7 +2,6 @@
 <html lang="en">
   
   <head>
-    <script src="https://cdn.amplitude.com/script/84d7af816cc1cc43b0f6258f231980c2.js"></script><script>window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('84d7af816cc1cc43b0f6258f231980c2', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":{"thrashedCursor":true,"errorClicks":true,"deadClicks":true,"rageClicks":true}}});</script>
   
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,6 +13,26 @@
     <title>MediCare Website</title>
   </head>
   <body>
+    <!-- Amplitude Browser SDK -->
+  <script type="module">
+    // Import the Amplitude Unified SDK
+    import * as amplitude from 'https://cdn.jsdelivr.net/npm/@amplitude/unified@1.1.0/dist/unified.min.js';
+
+    // Initialize Amplitude (client-side only)
+    if (typeof window !== 'undefined') {
+      amplitude.initAll('84d7af816cc1cc43b0f6258f231980c2', {
+        analytics: { autocapture: true },   // tracks clicks, page views automatically
+        sessionReplay: { sampleRate: 1 }   // 100% Session Replay
+      });
+    }
+
+    // Example: track a custom button click
+    const button = document.getElementById('testButton');
+    button.addEventListener('click', () => {
+      amplitude.getInstance().logEvent('Test Button Clicked', { buttonName: 'Click Me' });
+      alert('Event sent to Amplitude!');
+    });
+  </script>
     <div class="container">
       <nav>
         <div class="nav__logo">MEDICARE</div>
@@ -65,6 +84,7 @@
     </div>
   </body>
 </html>
+
 
 
 
