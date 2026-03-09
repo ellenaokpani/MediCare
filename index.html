@@ -38,7 +38,12 @@
             receive quick medical services can significantly impact the outcome
             of a situation.
           </p>
-          <button id="requestdembtn"  data-amplitude-name="Request Demo Button Clicked" class="btn">Request Demo</button>
+          <button  class="btn">Request Demo</button>
+          <script>
+  document.getElementById('requestBtn').addEventListener('click', () => {
+    amplitude.track('Request Demo');
+  });
+</script>
         </div>
         <div class="image">
           <span class="image__bg"></span>
@@ -67,6 +72,7 @@
     </div>
   </body>
 </html>
+
 
 
 
